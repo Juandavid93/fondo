@@ -69,10 +69,26 @@
         </li>
         <li class="separator hidden-lg hidden-md" *ngIf="isMobileMenu()"></li>
         <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
-            <a  [routerLink]="[menuItem.path]">
+            <a *ngIf="!menuItem.subItems" [routerLink]="[menuItem.path]">
                 <i class="{{menuItem.icon}}"></i>
                 <p>{{menuItem.title}}</p>
             </a>
+            <a *ngIf="menuItem.subItems" data-toggle="collapse" [attr.href]="'#' + menuItem.title.toLowerCase().replace(' ', '-')">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title.charAt(0).toLowerCase() + menuItem.title.slice(1)}}
+                    <b class="caret"></b>
+                </p>
+            </a>
+            <div *ngIf="menuItem.subItems" class="collapse" [attr.id]="menuItem.title.toLowerCase().replace(' ', '-')">
+                <ul class="nav">
+                    <li *ngFor="let subItem of menuItem.subItems" [routerLinkActive]="['active']">
+                        <a [routerLink]="[subItem.path]">
+                            <span class="sidebar-mini-icon">{{subItem.title.charAt(0).toLowerCase()}}</span>
+                            <span class="sidebar-normal">{{subItem.title.charAt(0).toUpperCase() + subItem.title.slice(1)}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </li>
     </ul>
 </div>
