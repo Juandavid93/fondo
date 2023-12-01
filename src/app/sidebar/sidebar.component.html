@@ -80,14 +80,15 @@
                 </p>
             </a>
             <div *ngIf="menuItem.subItems" class="collapse" [attr.id]="menuItem.title.toLowerCase().replace(' ', '-')">
-                <ul class="nav">
-                    <li *ngFor="let subItem of menuItem.subItems" [routerLinkActive]="['active']">
-                        <a [routerLink]="[subItem.path]">
-                            <span class="sidebar-mini-icon">{{subItem.title.charAt(0).toLowerCase()}}</span>
-                            <span class="sidebar-normal">{{subItem.title.charAt(0).toUpperCase() + subItem.title.slice(1)}}</span>
-                        </a>
-                    </li>
-                </ul>
+            <ul class="nav">
+            <li *ngFor="let subItem of menuItem.subItems" [routerLinkActive]="['active']">
+            <a [routerLink]="[subItem.path]">
+                <i class="{{subItem.icon}}"></i>
+                <span class="sidebar-mini-icon">{{subItem.title.charAt(0).toLowerCase()}}</span>
+                <span class="sidebar-normal">{{subItem.title.charAt(0).toUpperCase() + subItem.title.slice(1)}}</span>
+            </a>
+            </li>
+             </ul>
             </div>
         </li>
     </ul>

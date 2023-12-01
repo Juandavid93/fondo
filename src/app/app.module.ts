@@ -12,6 +12,12 @@ import { SidebarModule } from './sidebar/sidebar.module';
 import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { SavingsComponent } from './savings/savings.component';
+import { LoansComponent } from './loans/loans.component';
+import { PaymentsSavingsComponent } from './payments-savings/payments-savings.component';
+import { LoanPaymentsComponent } from './loan-payments/loan-payments.component';
+import { WithdrawalsComponent } from './withdrawals/withdrawals.component';
+import { ReportsComponent } from './reports/reports.component';
 
 @NgModule({
   imports: [
@@ -26,7 +32,13 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    SavingsComponent,
+    LoansComponent,
+    PaymentsSavingsComponent,
+    LoanPaymentsComponent,
+    WithdrawalsComponent,
+    ReportsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
