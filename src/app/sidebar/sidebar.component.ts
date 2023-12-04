@@ -15,8 +15,8 @@ export const ROUTES: RouteInfo[] = [
     { path: '/loans', title: 'Solicitud prestamo',  icon:'pe-7s-cash', class: '' },
     { path: '/table', title: 'Pagos',  icon:'pe-7s-wallet', class: '', 
     subItems: [
-      { path: '/table', title: 'Ahorros', icon: 'pe-7s-piggy', class: '' },
-      { path: '/table', title: 'Prestamos', icon: 'pe-7s-cash', class: '' }
+      { path: '/savings', title: 'Ahorros', icon: 'pe-7s-wallet', class: '' },
+      { path: '/table', title: 'Prestamos', icon: 'pe-7s-wallet', class: '' }
     ] },
     { path: '/reports', title: 'Reportes',  icon:'pe-7s-display1', class: '' },
     { path: '/typography', title: 'Typography',  icon:'pe-7s-news-paper', class: '' },
