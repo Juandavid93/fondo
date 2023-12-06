@@ -1,1 +1,151 @@
-<p>loans works!</p>
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Crear Prestamo</h4>
+                    </div>
+                    <div class="content">
+                        <form >      
+                                   
+                            <div class="row">
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Tipo documento </label>
+                                        <select class="form-control">
+                                            <option value="option1">Seleccione</option>
+                                            <option value="option1">Cedula ciudadania</option>
+                                            <option value="option2">Cedula extranjeria</option>
+                                            <option value="option2">Permiso de permanencia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Numero documento</label>
+                                        <input type="text" class="form-control" placeholder="Number">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Nombres y apellidos </label>
+                                        <input type="text" class="form-control" placeholder="User name">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Fecha de Prestamo</label>
+                                        <input type="date" class="form-control" placeholder="Date of Entry">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Dependencia</label>
+                                        <select class="form-control">
+                                            <option value="option1">Seleccione</option>
+                                            <option value="option1">Gerencia general</option>
+                                            <option value="option2">Gerencia administrativa y financiera</option>
+                                            <option value="option2">Gerencia de talento humano</option>
+                                            <option value="option2">Gerencia de producto y servicio</option>
+                                            <option value="option2">Gerencia de operaciones</option>
+                                            <option value="option2">Gerencia Call center</option>
+                                            <option value="option2">Gerencia proyectos TI</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Cargo  </label>
+                                        <select class="form-control">
+                                            <option value="option1">Seleccione</option>            
+                                            <option value="option1">Agente Callcenter</option>
+                                            <option value="option2">Agente NOC</option>
+                                            <option value="option2">Analista de red</option>
+                                            <option value="option2">Asesor comercial</option>
+                                            <option value="option2">Assistente de gerencia</option>
+                                            <option value="option2">Aux almacen</option>
+                                            <option value="option2">Aux cartera</option>
+                                            <option value="option2">Aux mensajeria</option>
+                                            <option value="option2">Aux recepcion y caja</option>
+                                            <option value="option2">Aux tesoreria</option>
+                                            <option value="option2">Aux programa</option>
+                                            <option value="option2">Contador </option>
+                                            <option value="option2">Coordinador SGSST</option>
+                                            <option value="option2">Coordinador Callcenter</option>
+                                            <option value="option2">Coordinador contable</option>
+                                            <option value="option2">Coordinador corporativo</option>
+                                            <option value="option2">Coordinador de inovacion</option>
+                                            <option value="option2">Coordinador juridico</option>
+                                            <option value="option2">Coordinador NOC</option>
+                                            <option value="option2">Coordinador operativo</option>
+                                            <option value="option2">Coordinador residencial</option>
+                                            <option value="option2">Ingeniero de innovacion</option>
+                                            <option value="option2">Revisor fiscal</option>
+                                            <option value="option2">Tecnico</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-3">
+                                    <label>Ahorros a la fecha</label>
+                                    <input  type="integer" class="form-control" placeholder="800000">
+                                </div>
+                                
+                                <div class="col-md-3">
+                                    <label>Valor prestamo</label>
+                                    <input  type="text" class="form-control" id="loan_amount">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label>Numero de cuotas</label>
+                                    <input  type="text" class="form-control" id="loan_term">
+                                </div>
+                                
+                                <div class="text-center"> 
+                                    <label>Vizualizar plan de pagos</label>
+                                    <br> 
+                                    <button id="payment_plan" class="btn btn-warning btn-fill pull-right" style="margin-left: 0px; margin-right: 80px" type="button">Plan de Pago</button>
+                                </div>
+
+                            </div>
+
+                            <div class="row"> 
+                                <div class="col-md-12"> 
+                                    <h3 class="text-center">Plan de pagos </h3> 
+                                    <table class="table" id="results_table"> 
+                                        <thead> 
+                                            <tr> 
+                                                <th>Mes</th> 
+                                                <th>Valor del préstamo</th> 
+                                                <th>Valor cuota sin interés</th> 
+                                                <th>Valor interés</th> 
+                                                <th>Valor cuota con interés</th> 
+                                            </tr> 
+                                        </thead> 
+                                        <tbody> 
+                                            <!-- Aquí puedes agregar filas con los datos de la tabla de amortización --> 
+                                        </tbody> 
+                                    </table> 
+                                </div> 
+                            </div> 
+
+                            <button id="btnCreatesavings" type="submit" value="crearahorro" onclick="window.alert('Prestamo id 001 creado exitosamente')" class="btn btn-info btn-fill pull-right">Crear Prestamo</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
